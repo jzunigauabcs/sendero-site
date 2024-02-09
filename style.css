@@ -44,7 +44,7 @@ body {
   z-index: -1;
   filter: opacity(0.6);
 }
-.title-2 {
+.lb {
   border-left: 5px solid var(--color-blue);
   padding-left: 5px;
   padding-top: 0.5rem;
@@ -86,6 +86,12 @@ body {
 
 .roca .estacion-titulo{
   background-color: #7E4F45;
+}
+.informacion-titulo {
+  color: var(--color-blue);
+}
+.contenido {
+  text-align: justify;
 }
 
 footer {
