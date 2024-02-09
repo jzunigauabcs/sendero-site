@@ -62,6 +62,7 @@ body {
 .estacion-card {
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
 }
 .estacion-card .card img {
   height: 250px;
@@ -112,4 +113,19 @@ footer a {
 footer .line {
   border-top: 1px solid #ffffff;
   margin-bottom: 5px;
+}
+
+@media screen and (max-width: 1200px) {
+  .ruta img {
+    width: 100%;
+  }
+  .informacion-img {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 767px) {
+  .estacion-card .card {
+    width: 100%!important;
+    margin-bottom: 10px;
+  }
 }
