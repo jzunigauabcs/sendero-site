@@ -190,10 +190,14 @@ Col. Universitario. La Paz, Baja California Sur, México Tel: 612-123-8800
           });
 
           // Agrega una capa de archivo KMZ al mapa
-          const kmzLayer = new google.maps.KmlLayer({
-              url: './files/Ruta UABCS.kmz'
+          //const src = "./files/Ruta UABCS.kmz";
+          var src = 'https://developers.google.com/maps/documentation/javascript/examples/kml/westcampus.kml';          
+          const kmzLayer = new google.maps.KmlLayer(src, {
+            suppressInfoWindows: true,
+            preserveViewport: false,
+            map: map
           });
-          kmzLayer.setMap(map); // Muestra la capa en el mapa
+          //kmzLayer.setMap(map); // Muestra la capa en el mapa
       }
     </script>
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA2u-Hdyx2x4EsSxMUGoLPEmuWRgpInJt0&callback=initMap" async defer></script>
