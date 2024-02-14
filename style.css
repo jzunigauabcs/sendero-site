@@ -56,6 +56,16 @@ body {
 }
 .estaciones {
   background-color: #ffffff;
+  position: relative;
+}
+.estaciones .layer {
+  position: absolute;
+  background-color: #ffffff91;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1
 }
 .estacion {
   margin-bottom: 2rem;
