@@ -44,6 +44,10 @@ body {
   z-index: -1;
   filter: opacity(0.6);
 }
+#map {
+  height: 500px;
+  width: 100%;
+}
 .lb {
   border-left: 5px solid var(--color-blue);
   padding-left: 5px;
