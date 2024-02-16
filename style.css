@@ -16,8 +16,15 @@ body {
 .menu li a {
   color: rgba(0, 0, 0, 70%);
 }
+.hero {
+  background-color: #093051;
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+}
 .hero img {
   width: 100%;
+  max-width: 1200px;
 }
 .carousel img {
    filter:  brightness(0.58);
