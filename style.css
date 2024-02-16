@@ -16,6 +16,16 @@ body {
 .menu li a {
   color: rgba(0, 0, 0, 70%);
 }
+.hero {
+  background-color: #093051;
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+}
+.hero img {
+  width: 100%;
+  max-width: 1200px;
+}
 .carousel img {
    filter:  brightness(0.58);
 }
@@ -56,6 +66,30 @@ body {
 }
 .estaciones {
   background-color: #ffffff;
+  position: relative;
+}
+.estaciones .layer {
+  position: absolute;
+  /*background-color: #ffffff91;*/
+  background: rgb(255,255,255);
+  background: linear-gradient(166deg, rgb(235 233 233 / 85%) 0%, rgba(238,238,238,1) 100%);
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1;
+}
+.estaciones .text-layer {
+  color: var(--color-blue);
+  text-align: center;
+}
+.estaciones h1.text-layer {
+  font-size: 3.2rem;
+  margin-top: 15%;
+  margin-bottom: 15px;
+}
+.estaciones h2.text-layer {
+  font-size: 2rem;
 }
 .estacion {
   margin-bottom: 2rem;
