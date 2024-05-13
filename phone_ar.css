@@ -1,0 +1,170 @@
+* {
+  font-family: Roboto;
+}
+
+:root {
+  --color-blue: #2D6FA4;
+}
+
+header {
+  background-color: #ffffff;
+}
+
+body {
+  background-color: #F5F5F5;
+}
+
+.logo {
+  width: 345px;
+}
+
+.menu li a {
+  color: rgba(0, 0, 0, 70%);
+}
+
+.hero {
+  background-color: #093051;
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+}
+
+.hero img {
+  width: 100%;
+  max-width: 1200px;
+}
+
+.objetivo {
+  position: relative;
+}
+
+.objetivo:after {
+  content: '';
+  background-image: url("./images/bg-pattern.png");
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  z-index: -1;
+  filter: opacity(0.6);
+}
+
+.lb {
+  border-left: 5px solid var(--color-blue);
+  padding-left: 5px;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+}
+
+.estaciones {
+  background-color: #ffffff;
+  position: relative;
+}
+
+.estaciones .layer {
+  position: absolute;
+  background: rgb(255,255,255);
+  background: linear-gradient(166deg, rgb(235 233 233 / 85%) 0%, rgba(238,238,238,1) 100%);
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1;
+}
+
+.estaciones .text-layer {
+  color: var(--color-blue);
+  text-align: center;
+}
+
+.estaciones h1.text-layer {
+  font-size: 3.2rem;
+  margin-top: 15%;
+  margin-bottom: 15px;
+}
+
+.estaciones h2.text-layer {
+  font-size: 2rem;
+}
+
+.periodo {
+  margin-bottom: .5rem;
+}
+
+.periodo-titulo {
+  color: white;
+}
+
+.periodo-card {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 15px;
+  justify-content: center; 
+  align-items: center;
+  
+}
+
+.periodo-card .card img {
+  height: 250px;
+  object-fit: cover;
+}
+
+.periodo-card .card-body {
+  text-align: center;
+}
+
+.periodo-card .card-title {
+  color: #2D6FA4;
+}
+
+.periodo-card .card-text {
+  color: rgba(0, 0, 0, 80%);
+}
+/*//////////////////////////////*/
+/*Colores de Periodos geológicos*/
+/*//////////////////////////////*/
+
+.paleozoico .periodo-titulo {
+  background-color: #6883db;
+}
+
+.fauna .periodo-titulo{
+  background-color: #8E2C17;
+}
+
+.roca .periodo-titulo{
+  background-color: #7E4F45;
+}
+
+footer {
+  background-color: var(--color-blue);
+  color: #ffffff;
+}
+
+footer .logo-2 {
+  width: 280px;
+}
+
+footer .direccion {
+  font-size: 12px;
+}
+
+footer a {
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 12px;
+}
+
+footer .line {
+  border-top: 1px solid #ffffff;
+  margin-bottom: 5px;
+}
+
+@media screen and (max-width: 767px) {
+  .periodo-card .card {
+    width: 100%!important;
+    margin-bottom: 10px;
+  }
+}
