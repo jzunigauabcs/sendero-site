@@ -22,7 +22,7 @@
             <a-assets>
                 <a-asset-item
                     id="animated-asset"
-                    src="https://www.senderouabcs.com/files/assetsDunkleosteus/Dunkleosteus.gltf"
+                    src="https://www.senderouabcs.com/files/assetsEarth/Earth.gltf"
                 ></a-asset-item>
             </a-assets>
 
@@ -31,21 +31,21 @@
                 id="animated-marker"
                 type="pattern"
                 preset="custom"
-                url="https://www.senderouabcs.com/files/assetsDunkleosteus/DunkleosteusMarker.patt"
+                url="https://www.senderouabcs.com/files/assetsEarth/MarkerEarth.patt"
                 raycaster="objects: .clickable"
                 emitevents="true"
                 cursor="fuse: false; rayOrigin: mouse;"
                 id="markerA"
             >
                 <a-entity
-                    id="bowser-model"
-                    scale="0.1 0.1 0.1"
-                    position="0 1 1"
-                    rotation="-45 0 0"
-                    animation-mixer="clip: "
-                    gltf-model="#animated-asset"
-                    class="clickable"
-                    gesture-handler
+                id="bowser-model"
+                scale="1 1 1"
+                position=".5 2.5"
+                rotation="-45 0 0"
+                animation-mixer="clip: Timelapse"
+                gltf-model="#animated-asset"
+                class="clickable"
+                gesture-handler
                 ></a-entity>
             </a-marker>
             <a-entity camera></a-entity>
