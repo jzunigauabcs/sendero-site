@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
+    <script src="https://raw.githack.com/donmccurdy/aframe-extras/master/dist/aframe-extras.loaders.min.js"></script>
+</head>
+<body style="margin: 0; overflow: hidden;">
+    <a-scene loading-screen="enabled: false;" renderer="logarithmicDepthBuffer: true;">
+        <a-assets>
+            <a-asset-item id="environment-asset" src="assets/esferico/scene.gltf"></a-asset-item>
+            <a-asset-item id="interior-asset" src="https://www.senderouabcs.com/files/assetsRex/asset.gltf"></a-asset-item>
+        </a-assets>
+
+        <a-entity camera look-controls wasd-controls position="0 1.6 0"></a-entity>
+
+        <a-entity id="environment" 
+                  scale="10 10 10"
+                  gltf-model="#environment-asset" 
+                  position="0 0 0"></a-entity>
+        
+        <a-entity id="interior-model" 
+            scale="0.25402344748577780 0.25402344748577780 0.25402344748577780"
+            animation-mixer="clip: run"
+            gltf-model="#interior-asset" 
+                  position="0 0.70 -2.0"></a-entity>
+    </a-scene>
+</body>
+</html>
