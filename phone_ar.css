@@ -335,3 +335,7 @@ html {
   scrollbar-width: thin;           /* Grosor de la barra de desplazamiento */
   scrollbar-color: #2D6FA4 transparent;  /* Color de la barra de desplazamiento y el fondo */
 }
+
+.timeline-img-header img {
+  filter: brightness(0.5);
+}
