@@ -7,6 +7,54 @@
 <body style="margin: 0; overflow: hidden;">
     <a-scene loading-screen="enabled: false;" renderer="logarithmicDepthBuffer: true;">
         <a-assets>
+            <!-- Cargar el modelo envolvente glTF -->
+            <a-asset-item id="environment-asset" src="https://www.senderouabcs.com/files/assetsesferico/new-world/scene.gltf"></a-asset-item>
+            <!-- Cargar el modelo interior glTF -->
+            <a-asset-item id="interior-asset" src="https://www.senderouabcs.com/files/assetsRex/asset.gltf"></a-asset-item>
+        </a-assets>
+
+        <!-- Configurar la cámara dentro del entorno -->
+        <a-entity camera look-controls wasd-controls position="0 1.6 0"></a-entity>
+
+        <!-- Añadir el modelo envolvente 3D -->
+        <a-entity id="environment" 
+                  scale="10 10 10"
+                  gltf-model="#environment-asset" 
+                  position="0 0 0"></a-entity>
+        
+        <!-- Añadir el modelo interior 3D dentro del entorno -->
+        <a-entity id="interior-model" 
+            scale="12.25402344748577780 12.25402344748577780 12.25402344748577780"
+            animation-mixer="clip: run"
+            gltf-model="#interior-asset" 
+            position="-420 -2550 -3850"
+
+            rotation="0 0 0"></a-entity>
+</a-scene>
+</body>
+</html>
+<!-- Añadir el modelo interior 3D dentro del entorno 
+las mismas espeficaciones con el modelo envolvente
+  <a-entity id="interior-model" 
+  
+      scale="700.25402344748577780(ancho) 850.25402344748577780(alto) 230.25402344748577780"
+      animation-mixer="clip: run"
+      gltf-model="#interior-asset" 
+            position="200(izquierda y derecha se manejan con numeros negativos y positivos normales) -2500(abajo y arriba) -3900(alejar y acercar)"
+
+            rotation="0 0 0" (el cero de en medio es para rotar en el eje x horizontalmente)></a-entity>
+</a-scene>
+-->
+
+<!-- <!DOCTYPE html>
+<html>
+<head>
+    <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
+    <script src="https://raw.githack.com/donmccurdy/aframe-extras/master/dist/aframe-extras.loaders.min.js"></script>
+</head>
+<body style="margin: 0; overflow: hidden;">
+    <a-scene loading-screen="enabled: false;" renderer="logarithmicDepthBuffer: true;">
+        <a-assets>
             <a-asset-item id="environment-asset" src="https://www.senderouabcs.com/files/assetsesferico/scene.gltf"></a-asset-item>
             <a-asset-item id="interior-asset" src="https://www.senderouabcs.com/files/assetsRex/asset.gltf"></a-asset-item>
         </a-assets>
@@ -25,4 +73,4 @@
                   position="0 0.70 -2.0"></a-entity>
     </a-scene>
 </body>
-</html>
+</html> -->
