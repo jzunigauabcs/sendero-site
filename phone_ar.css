@@ -233,7 +233,55 @@ a:hover, a:active, a:focus {
   right: 0;
 }
 
+.date-punto6 {
+  background: #4A4A4A;
+  display: inline-block;
+  color: #FFFFFF;
+  padding: 10px;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
 
+.date-punto7 {
+  background: #2E8B8B;
+  display: inline-block;
+  color: #FFFFFF;
+  padding: 10px;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.date-punto8 {
+  background: #004E89;
+  display: inline-block;
+  color: #FFFFFF;
+  padding: 10px;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.date-punto9 {
+  background: #C2A14D;
+  display: inline-block;
+  color: #FFFFFF;
+  padding: 10px;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.date-punto10 {
+  background: #748067;
+  display: inline-block;
+  color: #FFFFFF;
+  padding: 10px;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
 
 footer {
   background-color: #2D6FA4;
