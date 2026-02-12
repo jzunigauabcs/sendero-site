@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>AR Ambientes</title>
+
+  <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
+  <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar.js"></script>
+  <script src="https://raw.githack.com/donmccurdy/aframe-extras/master/dist/aframe-extras.loaders.min.js"></script>
+  <script src="https://raw.githack.com/AR-js-org/studio-backend/master/src/modules/marker/tools/gesture-detector.js"></script>
+  <script src="https://raw.githack.com/AR-js-org/studio-backend/master/src/modules/marker/tools/gesture-handler.js"></script>
+</head>
+<body style="margin: 0; overflow: hidden;">
+
+  <a-scene
+    maxFPS="60"
+    arjs="detectionMode: mono; sourceType: webcam; debugUIEnabled: false; sourceWidth: 640; sourceHeight: 480; displayWidth: 640; displayHeight: 480;"
+    embedded
+    renderer="logarithmicDepthBuffer: true; precision: medium; antialias: false; powerPreference: low-power;"
+    vr-mode-ui="enabled: false"
+    gesture-detector
+    id="scene"
+  >
+
+    <a-marker type="pattern" preset="custom" url="https://www.senderouabcs.com/files/assetsSnowballEarth/snowballEarthMarker.patt" id="markerIcePlanet">
+      <a-entity id="icePlanetKodel" position="0 0.1 0" scale="1 1 1" class="clickable"></a-entity>
+    </a-marker>
+
+    <a-marker type="pattern" preset="custom" url="https://www.senderouabcs.com/files/assetsFormacionLuna/formacionLunaMarker.patt" id="markerCollisionPlanet">
+      <a-entity id="collisionPlanetKodel" position="0 0.1 0" scale="1 1 1" class="clickable"></a-entity>
+    </a-marker>
+
+    <a-marker type="pattern" preset="custom" url="https://www.senderouabcs.com/files/assetsInicioTierra/inicioTierraMarker.patt" id="markerEarlyArchean">
+      <a-entity id="earlyArcheanKodel" position="0 0.1 0" scale="1 1 1" class="clickable"></a-entity>
+    </a-marker>
+
+    <a-marker type="pattern" preset="custom" url="https://www.senderouabcs.com/files/assetsMamutLanudo/mamutLanudoMarker.patt" id="markerMammoth">
+      <a-entity id="mammoth1" position="0 0.1 0" scale="1 1 1" class="clickable"></a-entity>
+    </a-marker>
+
+    <a-marker type="pattern" preset="custom" url="https://www.senderouabcs.com/files/assetsTrilobite/trilobiteMarker.patt" id="markerTrilobites">
+      <a-entity id="trilobites1" position="0 0.1 0" scale="1 1 1" class="clickable"></a-entity>
+    </a-marker>
+
+    <a-marker type="pattern" preset="custom" url="https://www.senderouabcs.com/files/assetsAmonite/amoniteMarker.patt" id="markerAmmonites">
+      <a-entity id="ammonites1" position="0 0.1 0" scale="1 1 1" class="clickable"></a-entity>
+    </a-marker>
+
+    <a-marker type="pattern" preset="custom" url="https://www.senderouabcs.com/files/assetsArchelon/archelonMarker.patt" id="markerArchelon">
+      <a-entity id="archelon1" position="0 0.1 0" scale="1 1 1" class="clickable"></a-entity>
+    </a-marker>
+
+    <a-marker type="pattern" preset="custom" url="https://www.senderouabcs.com/files/assetsBisonte/bisonteMarker.patt" id="markerBisonPriscus">
+      <a-entity id="bisonPriscus" position="0 0.1 0" scale="1 1 1" class="clickable"></a-entity>
+    </a-marker>
+
+    <a-marker type="pattern" preset="custom" url="https://www.senderouabcs.com/files/assetsLeonCavernas/leonCavernasMarker.patt" id="markerPhanteraSpelaea">
+      <a-entity id="phanteraSpelaea" position="0 0.1 0" scale="1 1 1" class="clickable"></a-entity>
+    </a-marker>
+
+    <a-marker type="pattern" preset="custom" url="https://www.senderouabcs.com/files/assetsAnomalacaris/anomalacarisMarker.patt" id="markerAnomalacaris">
+      <a-entity id="anomalacaris1" position="0 0.1 0" scale="1 1 1" class="clickable"></a-entity>
+    </a-marker>
+
+    <a-marker type="pattern" preset="custom" url="https://www.senderouabcs.com/files/assetsCycadales/cycadalesMarker.patt" id="markerCycadaceae">
+      <a-entity id="cycadaceae1" position="0 0.1 0" scale="1 1 1" class="clickable"></a-entity>
+    </a-marker>
+
+    <!--<a-marker type="pattern" preset="custom" url="marcadores/pattern-5.Paleo-Carbonífero-libelulagigante.patt" id="markerLibelula">
+      <a-entity id="libelula1" position="0 0.1 0" scale="1 1 1" class="clickable"></a-entity>
+    </a-marker>-->
+    
+    <a-marker type="pattern" preset="custom" url="https://www.senderouabcs.com/files/assetsEquusLambei/equusLambeiMarker.patt" id="markerHorse">
+      <a-entity id="horse1" position="0 0.1 0" scale="1 1 1" class="clickable"></a-entity>
+    </a-marker>
+
+    <a-marker type="pattern" preset="custom" url="https://www.senderouabcs.com/files/assetsMaresCambrico/maresCambricoMarker.patt" id="markerFaunaMarina">
+      <a-entity id="faunaMarina1" position="0 0.1 0" scale="1 1 1" class="clickable"></a-entity>
+    </a-marker>
+
+    <a-entity camera
+              cursor="fuse: false; rayOrigin: mouse;"
+              raycaster="objects: .clickable"
+              emitevents="true">
+    </a-entity>
+
+  </a-scene>
+  <script>
+    const modelConfig = {
+      icePlanet: { path: 'https://www.senderouabcs.com/files/assetsSnowballEarth/snowballEarthModel.glb', entity: 'icePlanetKodel', marker: 'markerIcePlanet' },
+      planetCollision: { path: 'https://www.senderouabcs.com/files/assetsFormacionLuna/formacionLunaModel.glb', entity: 'collisionPlanetKodel', marker: 'markerCollisionPlanet' },
+      earlyArchean: { path: 'https://www.senderouabcs.com/files/assetsInicioTierra/inicioTierraModel.glb', entity: 'earlyArcheanKodel', marker: 'markerEarlyArchean' },
+      mammoth: { path: 'https://www.senderouabcs.com/files/assetsMamutLanudo/mamutLanudoModel.glb', entity: 'mammoth1', marker: 'markerMammoth' },
+      trilobites: { path: 'https://www.senderouabcs.com/files/assetsTrilobite/trilobiteModel.glb', entity: 'trilobites1', marker: 'markerTrilobites' },
+      ammonites: { path: 'https://www.senderouabcs.com/files/assetsAmonite/amoniteModel.glb', entity: 'ammonites1', marker: 'markerAmmonites' },
+      archelon: { path: 'https://www.senderouabcs.com/files/assetsArchelon/archelonModel.glb', entity: 'archelon1', marker: 'markerArchelon'},
+      bison: { path: 'https://www.senderouabcs.com/files/assetsBisonte/bisonteModel.glb', entity: 'bisonPriscus', marker: 'markerBisonPriscus'},
+      phantera: { path: 'https://www.senderouabcs.com/files/assetsLeonCavernas/leonCavernasModel.glb', entity: 'phanteraSpelaea', marker: 'markerPhanteraSpelaea'},
+      anomalacaris: { path: 'https://www.senderouabcs.com/files/assetsAnomalacaris/anomalacarisModel.glb', entity: 'anomalacaris1', marker: 'markerAnomalacaris'},
+      cycadaceae: { path: 'https://www.senderouabcs.com/files/assetsCycadales/cycadalesModel.glb', entity: 'cycadaceae1', marker: 'markerCycadaceae'},
+      //libelula: { path: 'modelos/meganeura 3d model.glb', entity: 'libelula1', marker: 'markerLibelula'},
+      horse: { path: 'https://www.senderouabcs.com/files/assetsEquusLambei/equusLambeiModel.glb', entity: 'horse1', marker: 'markerHorse'},
+      faunaMarina: { path: 'https://www.senderouabcs.com/files/assetsMaresCambrico/maresCambricoModel.glb', entity: 'faunaMarina1', marker: 'markerFaunaMarina'}
+    };
+
+    const loadedModels = {};
+
+    function loadModel(modelKey) {
+      if (loadedModels[modelKey]) return;
+      const config = modelConfig[modelKey];
+      const entity = document.getElementById(config.entity);
+
+      entity.setAttribute('gesture-handler', 'minScale: 0.5; maxScale: 3');
+      entity.classList.add('clickable');
+
+      // Cargar modelo
+      entity.setAttribute('gltf-model', config.path);
+
+      entity.addEventListener('model-loaded', () => {
+        loadedModels[modelKey] = true;
+        entity.setAttribute('visible', 'true');
+      }, { once: true });
+
+      entity.addEventListener('model-error', () => {
+        console.error("Error cargando modelo:", config.path);
+      }, { once: true });
+    }
+
+    document.querySelector('a-scene').addEventListener('loaded', () => {
+      Object.keys(modelConfig).forEach(modelKey => {
+        const config = modelConfig[modelKey];
+        const marker = document.getElementById(config.marker);
+        const entity = document.getElementById(config.entity);
+
+        // Inicialmente invisible
+        entity.setAttribute('visible', 'false');
+
+        marker.addEventListener('markerFound', () => {
+          loadModel(modelKey);
+          entity.setAttribute('visible', 'true');
+        });
+
+        marker.addEventListener('markerLost', () => {
+          entity.setAttribute('visible', 'false');
+        });
+      });
+    });
+  </script>
+</body>
+</html>
