@@ -24,15 +24,69 @@
                   rotation="0 160 0"></a-entity>
         
         <!-- Añadir el modelo interior 3D dentro del entorno -->
-        <a-entity id="interior-model" 
-        
-            scale="700.25402344748577780 850.25402344748577780 230.25402344748577780"
+        <a-entity id="interior-model"         
             animation-mixer="clip: run"
-            gltf-model="#interior-asset" 
-                  position="0 -2550 -3850"
-
-                  rotation="0 -1.5 0"></a-entity>
+            gltf-model="#interior-asset"></a-entity>
     </a-scene>
+    <script>
+        const dino = document.querySelector('#interior-model');
+
+        const ubicaciones = [
+            {
+            position: {x: -4220, y: -2550, z: -1250},
+            rotation: {x: 0, y: 80, z: 0}
+            },
+            {
+            position: {x: -420, y: -2550, z: -3850},
+            rotation: {x: 0, y: 0, z: 0}
+            },
+            {
+            position: {x: 3500, y: -2550, z: 2000},
+            rotation: {x: 0, y: -120, z: 0}
+            },
+            {
+            position: {x: -820, y: -2550, z: 3050},
+            rotation: {x: 0, y: 160, z: 0}
+            },
+            {
+            position: {x: 200, y: -2550, z: -4500}, 
+            rotation: {x: 0, y: 180, z: 0} 
+            }
+        ];
+
+        const tamalloPrincipal = "700 850 230";
+        let primeraAparicion = true;
+
+        function cicloDino() {
+            let nuevaUbicacion;
+            if (primeraAparicion) {
+                nuevaUbicacion = { position: {x: -420, y: -2550, z: -3850}, rotation: {x: 0, y: 0, z: 0} };
+                primeraAparicion = false;
+            } else {
+                nuevaUbicacion = ubicaciones[Math.floor(Math.random() * ubicaciones.length)];
+            }
+            dino.setAttribute('scale', "10 10 10");
+            dino.setAttribute('position', nuevaUbicacion.position);
+            dino.setAttribute('rotation', nuevaUbicacion.rotation);
+            dino.setAttribute('visible', true);
+
+            dino.removeAttribute('animation');
+            dino.setAttribute('animation', {
+            property: 'scale',
+            to: tamalloPrincipal,
+            dur: 6000, 
+            easing: 'linear'
+            });
+
+            setTimeout(() => {
+            dino.setAttribute('visible', false);
+            setTimeout(cicloDino, 1000);
+            }, 7000);
+        }
+
+        cicloDino();
+    </script>
+    
 </body>
 </html>
     <!-- Añadir el modelo interior 3D dentro del entorno 
