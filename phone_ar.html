@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Vertical Timeline</title>
   <link rel="stylesheet" href="phone_ar.css"> 
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
 <body>
   <!--Banner-->
@@ -22,6 +23,17 @@
 
   <!--Cuerpo de la pagina-->
   <div class="scrollbar" id="scrollbar1">
+    <header class="time-banner">
+      <div class="previus-time">
+        <i class="fa-solid fa-chevron-left"></i>
+      </div>
+      <div class="title-time">
+        <h1></h1>
+      </div>
+      <div class="next-time">
+        <i class="fa-solid fa-chevron-right"></i>
+      </div>
+    </header>
     <section class="timeline">
 
       <!--Pangea-->
@@ -151,7 +163,10 @@
       </div>
 
       <!--Formación de la Luna(HADICO)-->
-      <div class="timeline-item">
+      <div class="timeline-item precambrico">
+        <div class="era-header">
+          <span class="era-title">PRECÁMBRICO</span>
+        </div>
         <div class="timeline-img"></div>
         <div class="timeline-content timeline-card js--fadeInLeft">
           <div class="timeline-img-header">
@@ -160,12 +175,23 @@
           </div>
           <div class="date-punto6">Hádico</div>
           <p> Es probable que la Tierra haya sido golpeada por un cuerpo del tamaño de Marte hace 4.4 y 4.6 mil millones de años dando origen a la luna.</p>
-          <a class="bnt-more" href="cam_ar/allNewModels.html">Ver</a>
+          <div class="acciones">
+            <a class="bnt-more" href="cam_ar/allNewModels.html">Ver</a>
+            <div class="audio-container">
+              <audio>
+                <source src="audios/audio_formacion_luna.mp3" type="audio/mp3">
+              </audio>
+
+              <div class="button-play-pause">
+                <i class="fa-solid fa-play"></i>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
 
       <!--Inicio de la vida en la Tierra(ARCAICO)-->
-      <div class="timeline-item">
+      <div class="timeline-item precambrico">
         <div class="timeline-img"></div>
         <div class="timeline-content timeline-card js--fadeInLeft">
           <div class="timeline-img-header">
@@ -174,12 +200,23 @@
           </div>
           <div class="date-punto7">Arcaico</div>
           <p> Aparecieron las primeras formas de vida: Bacterias y arqueas. Más tarde, hace 3.500 millones de años se desarrolló el proceso autótrofo de la fotosíntesis.</p>
-          <a class="bnt-more" href="cam_ar/allNewModels.html">Ver</a>
+          <div class="acciones">
+            <a class="bnt-more" href="cam_ar/allNewModels.html">Ver</a>
+            <div class="audio-container">
+              <audio>
+                <source src="audios/audio_inicios_tierra.mp3" type="audio/mp3">
+              </audio>
+
+              <div class="button-play-pause">
+                <i class="fa-solid fa-play"></i>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
 
       <!--Tierra bola de nieve(PROTEROZOICO)-->
-      <div class="timeline-item">
+      <div class="timeline-item precambrico">
         <div class="timeline-img"></div>
         <div class="timeline-content timeline-card js--fadeInLeft">
           <div class="timeline-img-header">
@@ -193,7 +230,7 @@
       </div>
 
       <!--Anomalocaris(Cámbrico)-->
-      <div class="timeline-item">
+      <div class="timeline-item precambrico">
         <div class="timeline-img"></div>
         <div class="timeline-content timeline-card js--fadeInLeft">
           <div class="timeline-img-header">
@@ -207,7 +244,10 @@
       </div>
 
       <!--Trilobite(Cámbrico)-->
-      <div class="timeline-item">
+      <div class="timeline-item paleozoico">
+        <div class="era-header">
+          <span class="era-title">PALEOZOICO</span>
+        </div>
         <div class="timeline-img"></div>
         <div class="timeline-content timeline-card js--fadeInLeft">
           <div class="timeline-img-header">
@@ -221,21 +261,21 @@
       </div>
 
       <!--Paleo-Carbonífero-libelulagigante
-      <div class="timeline-item">
+      <div class="timeline-item paleozoico">
         <div class="timeline-img"></div>
         <div class="timeline-content timeline-card js--fadeInLeft">
           <div class="timeline-img-header">
             <img src="images/5.Paleo-Carbonífero-libelulagigante.jpg" alt="Libelula Image" style="width: 100%; height: 200px; object-fit: cover;">
-            <h2>Paleogeografía del Cretácico (120 Ma)</h2>
+            <h2>Meganeura</h2>
           </div>
-          <div class="date-punto5">Cretácico</div>
-          <p> Fue un período geológico que ocurrió hace aproximadamente 145 a 66 millones de años.</p>
-          <a class="bnt-more" href="cam_ar/ModelPleogeografía.html">Ver</a>
+          <div class="date-punto3">Carbonífero</div>
+          <p> Un insecto emparentado con las libélulas actuales, que vivió en el período Carbonífero hace aproximadamente 300 millones de años.</p>
+          <a class="bnt-more" href="cam_ar/allNewModels.html">Ver</a>
         </div>
       </div>-->
 
       <!--Mares del Cámbrico(Cámbrico)-->
-      <div class="timeline-item">
+      <div class="timeline-item paleozoico">
         <div class="timeline-img"></div>
         <div class="timeline-content timeline-card js--fadeInLeft">
           <div class="timeline-img-header">
@@ -249,7 +289,10 @@
       </div>
 
       <!--Amonite(Devónico)-->
-      <div class="timeline-item">
+      <div class="timeline-item mesozoico">
+        <div class="era-header">
+          <span class="era-title">MESOZOICO</span>
+        </div>
         <div class="timeline-img"></div>
         <div class="timeline-content timeline-card js--fadeInLeft">
           <div class="timeline-img-header">
@@ -263,7 +306,7 @@
       </div>
 
       <!--Archelon(Cretácico)-->
-      <div class="timeline-item">
+      <div class="timeline-item mesozoico">
         <div class="timeline-img"></div>
         <div class="timeline-content timeline-card js--fadeInLeft">
           <div class="timeline-img-header">
@@ -277,7 +320,7 @@
       </div>
 
       <!--Cycadales(Pérmico tardío)-->
-      <div class="timeline-item">
+      <div class="timeline-item mesozoico">
         <div class="timeline-img"></div>
         <div class="timeline-content timeline-card js--fadeInLeft">
           <div class="timeline-img-header">
@@ -291,7 +334,10 @@
       </div>
 
       <!--Bisonte estepario(Pleistoceno)-->
-      <div class="timeline-item">
+      <div class="timeline-item cenozoico">
+        <div class="era-header">
+          <span class="era-title">CENOZOICO</span>
+        </div>
         <div class="timeline-img"></div>
         <div class="timeline-content timeline-card js--fadeInLeft">
           <div class="timeline-img-header">
@@ -305,7 +351,7 @@
       </div>
 
       <!--Equus Lambei(Pleistoceno)-->
-      <div class="timeline-item">
+      <div class="timeline-item cenozoico">
         <div class="timeline-img"></div>
         <div class="timeline-content timeline-card js--fadeInLeft">
           <div class="timeline-img-header">
@@ -319,7 +365,7 @@
       </div>
 
       <!--Mamút Lanudo(Pleistoceno)-->
-      <div class="timeline-item">
+      <div class="timeline-item cenozoico">
         <div class="timeline-img"></div>
         <div class="timeline-content timeline-card js--fadeInLeft">
           <div class="timeline-img-header">
@@ -333,7 +379,7 @@
       </div>
 
       <!--León de las cavernas(Pleistoceno)-->
-      <div class="timeline-item">
+      <div class="timeline-item cenozoico">
         <div class="timeline-img"></div>
         <div class="timeline-content timeline-card js--fadeInLeft">
           <div class="timeline-img-header">
