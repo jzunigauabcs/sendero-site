@@ -101,6 +101,16 @@ containers.forEach(container => {
 
   container.querySelector('.button-play-pause').addEventListener('click', () => {
     if (audio.paused) {
+      containers.forEach(otroContainer => {
+        const otroAudio = otroContainer.querySelector('audio');
+        const otroBoton = otroContainer.querySelector('.button-play-pause i');
+        
+        if (otroAudio !== audio) {
+          otroAudio.pause();
+          otroBoton.classList.remove('fa-pause');
+          otroBoton.classList.add('fa-play');
+        }
+      });
       audio.play();
       boton.classList.remove('fa-play');
       boton.classList.add('fa-pause');
