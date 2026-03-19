@@ -163,11 +163,6 @@ header .overlay {
     display: flex;
     justify-content: center;
     margin-bottom: 60px;
-    transform: translateX(0);
-}
-
-.era-header:hover {
-    transform: translateX(-10%);
 }
 
 .era-title {
@@ -186,9 +181,9 @@ header .overlay {
 }
 
 .audio-container{
-  width: 100%;
+  width: 80%;
   display: flex;
-  justify-content: end;
+  justify-content: flex-end;
 }
 
 .button-play-pause{
@@ -441,6 +436,11 @@ footer .line {
   .previus-time,
   .next-time {
     font-size: 50px;
+  }
+
+  .audio-container {
+    width: 100%;
+    justify-content: start;
   }
   
 }
