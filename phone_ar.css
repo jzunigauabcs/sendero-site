@@ -40,6 +40,24 @@ header .overlay {
   align-items: center;
 }
 
+.time-banner {
+  margin-top: 80px;
+  height: 30vh;
+  background: linear-gradient(90deg,rgba(9, 9, 121, 1) 35%, rgba(90, 185, 204, 1) 100%);
+}
+
+.title-time {
+  width: 80%;
+  text-align: center;
+  font-size: 40px;
+}
+
+.previus-time,
+.next-time {
+  cursor: pointer;
+  font-size: 100px;
+}
+
 .timeline {
   position: relative;
   padding: 100px 0;
@@ -112,12 +130,74 @@ header .overlay {
 .timeline-img {
   width: 30px;
   height: 30px;
-  background: #3F51B5;
+  background: #3f57b5;
   border-radius: 50%;
   position: absolute;
   left: 50%;
   margin-top: 25px;
   margin-left: -15px;
+}
+
+.precambrico .timeline-img,
+.precambrico .era-title{
+  background: #F74370;
+}
+
+.paleozoico .timeline-img,
+.paleozoico .era-title{
+  background: #1E88E5;
+}
+
+.mesozoico .timeline-img,
+.mesozoico .era-title{
+  background: #43A047;
+}
+
+.cenozoico .timeline-img,
+.cenozoico .era-title{
+  background: #F4511E;
+}
+
+.era-header {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 60px;
+}
+
+.era-title {
+    background: #F74370;
+    color: white;
+    padding: 10px 25px;
+    font-size: 24px;
+    border-radius: 50px;
+    box-shadow: 0 4px 15px rgba(63, 87, 181, 0.5);
+}
+
+.acciones{
+  display:flex;
+  gap:10px;
+  align-items:center;
+}
+
+.audio-container{
+  width: 80%;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.button-play-pause{
+    width:40px;
+    height:40px;
+    border-radius:50%;
+    background:#ff4d4d;
+    color:white;
+    font-size:16px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    box-shadow:0 3px 8px rgba(0,0,0,0.3);
+    cursor: pointer;
 }
 
 a {
@@ -342,6 +422,27 @@ footer .line {
     border-width: 10px 15px 10px 0;
     border-color: transparent #f5f5f5 transparent transparent;
   }
+
+  .time-banner {
+    margin-top: 40px;
+    height: 20vh;
+  }
+
+  .title-time {
+    width: 95%;
+    font-size: 24px;
+  }
+
+  .previus-time,
+  .next-time {
+    font-size: 50px;
+  }
+
+  .audio-container {
+    width: 100%;
+    justify-content: start;
+  }
+  
 }
 
 /*Animaciones de el banner*/
